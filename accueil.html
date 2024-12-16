@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset = "utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Soccer Locker</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/bootstrap.css">  
+    <!-- Lien vers la feuille de style Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Lien vers la bibliothèque jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Lien vers le plugin Collapse de Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Lien vers le plugin Collapse de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header-section">
+        <div class="container">
+            <header class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="./accueil.html">Acceuil</a></li>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Produits
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="./produits/maillots.html">Maillots</a>
+                              <a class="dropdown-item" href="./produits/chaussures.html">Chaussures</a>
+                              <a class="dropdown-item" href="./produits/equipements.html">Equipements</a>
+                            </div>
+                        </div>
+                        <li><a href="">Mon Compte</a></li>  
+                        <li><a href="./panier.html">Panier</a></li>
+                    </ul>
+            </header>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Donnez à votre entrainement un nouveau style!</h1>
+                    <p>La boutique en ligne 100% football</p>
+                    <a href="./produits/maillots.html">Explorez Maitenant &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="images/image1.png" alt="landing image"> 
+                </div>
+            </div>
+        </div>
+    
+        <section class="categories">
+            <div class="container">
+                <div class="row">
+                    <div id="imageContainer">
+                        <img id="currentImage" src="images/accueil1.jpg">
+                      </div>                  
+                </div>
+            </div>
+        </section>
+        <!--Catégories Vedettes-->
+        <section class="featured-products">
+            <div class="container">
+                <h2><strong>Catégories Vedettes</strong></h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/chaussure8.png" alt="produit 1">
+                        <a href="./articles/chaussure8.html"><h3>Chaussures de football moulées SUPERFLY 9 CLUB FG/MG</h3></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/maillot6.png" alt="produit 2">
+                        <a href="./articles/maillot6.html"><h3>Maillot de football FC Barcelone Fourth 22/23</h3></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/chaussure9.png" alt="produit 3">
+                        <a href="./articles/chaussure9.html"><h3>Chaussures de football vissées ZOOM VAPOR 15 ACAD SG-PRO AC</h3></a>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!--Bons Plans-->
+        <section class="featured-products">
+            <div class="container">
+                <h2><strong>Bons Plans</strong></h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/equipement3.png" alt="produit 1">
+                        <a href="./articles/equipement3.html"><h3>Ballon de football STARLANCER CLUB</h3></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/chaussure5.png" alt="produit 2">
+                        <a href="./articles/chaussure5.html"><h3>Chaussures de football moulées COPA PURE.4 FXG</h3></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/maillot2.png" alt="produit 3">
+                        <a href="./articles/maillot2.html"><h3>Maillot d'entraînement de football Bayern Munich 22/23</h3></a>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; Contactez-nous au 07 65 22 65 93</p>
+        <div class="social-media">
+            <p><i class="fab fa-facebook-f"></i></p>
+            <p><i class="fab fa-twitter"></i></p>
+            <p><i class="fab fa-instagram"></i></p>
+            <p><i class="fab fa-linkedin-in"></i></p>
+        </div>
+  </footer>
+  <!-- Fin du pied de page -->
+  <script src="./script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>The Soccer Locker</title>
+        <link rel="shortcut icon" href="images/logo.png">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />  
+        <link rel="stylesheet" href="../css/bootstrap.css"> 
+        <style>
+                @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background: radial-gradient(#fff, #eaf2fb);  }
+
+            .navbar{
+                display: flex;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .logo img{
+                width: 200px;
+            }
+
+            nav{
+                flex: 1;
+                text-align: right;
+            }
+
+            nav ul{
+                display: inline-block;
+                list-style-type: none;
+            }
+
+            nav ul li{
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            nav ul li a{
+                text-decoration: none;
+                color: #555;
+            }
+
+            .container1{
+                max-width: 1200px;
+                margin: 20px auto;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .header-section{
+                margin-top: -20px;
+                /*background: radial-gradient(#fff, #eaf2fb);*/
+            }
+
+            .article{
+                padding-top: 5%;
+                padding-bottom: 1%;
+            }
+
+            .image_article1{
+                margin-right: 5%;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+
+            #mainImage1{
+                height: 80%;
+            }
+
+            #zoom-box1{
+                width: 60px;
+                height: 60px;
+                border: solid #FFF;
+                position: absolute;
+                background-image: url("images/maillot6.png");
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+                filter: brightness(1.3);
+            }
+
+
+
+
+            .infos_article{
+                font-size: 150%;
+                margin-left: 5%;
+                flex: 1;
+            }
+
+            h1 {
+                padding-bottom: 15%;
+            }
+            
+
+
+
+
+            /* Pied de page */
+            footer {
+                margin-top: 100px;
+                background-color: #000;
+                padding: 30px;
+                color: #fff;
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: space-between;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 12%;
+            }
+
+            footer .social-media{
+                display: flex;
+            }
+            footer .social-media p{
+                margin-right: 15px;
+                border: 1px solid #fff;
+                border-radius: 100%;
+                padding: 5px;
+                text-align:center;
+                width: 20px;
+                cursor:pointer;
+            }
+            /* Fin du pied de page */
+        </style>
+    <!-- Lien vers la feuille de style Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Lien vers la bibliothèque jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Lien vers le plugin Collapse de Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Lien vers le plugin Collapse de Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>    
+    
+    <body>
+    <section class="header-section">
+        <div class="container1">
+            <header class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../accueil.html">Acceuil</a></li>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Produits
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="../produits/maillots.html">Maillots</a>
+                              <a class="dropdown-item" href="../produits/chaussures.html">Chaussures</a>
+                              <a class="dropdown-item" href="../produits/equipements.html">Equipements</a>
+                            </div>
+                        </div>
+                        <li><a href="">Mon Compte</a></li>  
+                        <li><a href="./panier.html">Panier</a></li>
+                    </ul>
+            </header>
+        </div>
+    </section>    
+
+    <div class="article container">
+        <div class="row">
+            <div class="image_article1">
+                <img id="mainImage1" src="images/maillot6.png" alt="Image du produit" onmouseover="afficherElement()" onmouseout="cacherElement()">
+                <div id="zoom-box1"></div>
+            </div>
+            <div class="infos_article">
+                <h1>Maillot de football FC Barcelone Fourth 22/23</h1>
+                <p>Prix : 53,99€</p>
+                <label for="taille">Taille :</label>
+                <select id="taille">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+    
+                <label for="quantite">Quantité :</label>
+                <select id="quantite">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <br><br>
+                <button type="button">Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; Contactez-nous au 07 65 22 65 93</p>
+        <div class="social-media">
+            <p><i class="fab fa-facebook-f"></i></p>
+            <p><i class="fab fa-twitter"></i></p>
+            <p><i class="fab fa-instagram"></i></p>
+            <p><i class="fab fa-linkedin-in"></i></p>
+        </div>
+    </footer>
+  <!-- Fin du pied de page -->
+    <script>
+                const mainImage = document.getElementById('mainImage1');
+        const container = document.querySelector('.image_article1');
+
+        mainImage.addEventListener('click', function() {
+            const currentSrc = this.getAttribute('src');
+            const newSrc = currentSrc === 'images/maillot6.png' ? 'images/maillot6d.png' : 'images/maillot6.png';
+            const newImage = new Image();
+            newImage.src = newSrc;
+
+            newImage.addEventListener('load', function() {
+                const width = mainImage.offsetWidth;
+                const height = mainImage.offsetHeight;
+                const newWidth = newImage.width;
+                const newHeight = newImage.height;
+
+                const scaleFactor = width / newWidth;
+                const scaledHeight = newHeight * scaleFactor;
+
+                mainImage.setAttribute('src', newSrc);
+                mainImage.style.height = scaledHeight + 'px';
+            });
+        });
+
+        container.addEventListener('click', function(event) {
+            const x = event.offsetX;
+            const width = this.offsetWidth;
+
+            if (x > width / 2) {
+                const currentSrc = mainImage.getAttribute('src');
+                const newSrc = currentSrc === 'images/maillot6.png' ? 'images/maillot6d.png' : 'images/maillot6.png';
+                const newImage = new Image();
+                newImage.src = newSrc;
+
+                newImage.addEventListener('load', function() {
+                    const width = mainImage.offsetWidth;
+                    const height = mainImage.offsetHeight;
+                    const newWidth = newImage.width;
+                    const newHeight = newImage.height;
+
+                    const scaleFactor = width / newWidth;
+                    const scaledHeight = newHeight * scaleFactor;
+
+                    mainImage.setAttribute('src', newSrc);
+                    mainImage.style.height = scaledHeight + 'px';
+                });
+            }
+        });
+
+
+
+
+
+
+
+        zoom=2;
+        document.getElementById("mainImage1").onmousemove=function(){
+            loupe=document.getElementById("zoom-box1");
+            loupe.style.left=event.clientX-400+"px";
+            loupe.style.top=event.clientY-160+"px";
+            loupe.style.backgroundSize=(450*zoom)+"px";
+            loupe.style.backgroundPosition=-(loupe.offsetLeft*zoom)+"px";
+            loupe.style.backgroundPositionX = -(loupe.offsetLeft * zoom+950) + "px";
+            loupe.style.backgroundPositionY = -(loupe.offsetTop * zoom+10) + "px";
+        }
+
+
+
+
+
+        function afficherElement() {
+            var element = document.getElementById("zoom-box1");
+            element.style.display = "block";
+        }
+
+
+        function cacherElement() {
+            var element = document.getElementById("zoom-box1");
+            element.style.display = "none";
+        }
+
+    </script>
+    </body>
+</html>
